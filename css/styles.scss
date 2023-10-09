@@ -6,7 +6,7 @@ $black: #222;
 $dark-blue: #14213d;
 $orange: #e79209;
 $grey: #e5e5e5;
-$white: #ffffff;
+$white: whitesmoke;
 
 body {
   min-height: $full-height;
@@ -16,7 +16,7 @@ body {
 main {
   height: $full-height;
   display: flex;
-  background-color: $black;
+  background-color: $white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,36 +25,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 3.5rem;
-  writing-mode: sideways-lr;
-  height: 100%;
   text-align: center;
-  padding-left: 25%;
+  color: $white;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-p, label , input{
+p, label , input, button{
   font-size: 1.3rem;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+a {
+  color: $black;
 }
 
 #img-container {
-  width: 30%;
+  flex: 1 1;
+  max-width: 400px;
   height: 100%;
   background-image: url("../img/background.jpg");
   background-position: center;
   background-size: cover;
-
-  p {
-    writing-mode: sideways-lr;
-  }
+  display: flex;
+  align-items: flex-end;
 }
 
 #form-sect {
   padding: 20px 50px;
   align-self: center;
-  background-color: $orange;
+  color: $black;
+  flex: 1 1;
 
   form {
     margin: 50px 0;
@@ -67,40 +73,52 @@ p, label , input{
       flex-direction: column;
       label {
         display: inline-block;
-        text-transform: uppercase;
-        font-weight: bold;
-        width: 200px;
+        text-transform: lowercase;
         margin-bottom: 10px;
-        opacity: 0.8;
+        opacity: 0.6;
       }
   
       input {
-        width: 200px;
+        width: 300px;
         padding: 10px;
         border: 1px solid transparent;
         border-radius: 5px;
         outline: none;
+        background-color: $black;
+        color: $white;
         transition: all 0.2s ease;
 
         &:focus {
-          box-shadow: 0px 0px 5px 3px rgba(51, 51, 51, 0.6) ;
+          box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.6);
           border: none;
         }
 
-        &:valid {
+        &.valid {
           border-color: green;
         }
-        &:invalid {
+        &.invalid {
           border-color: red;
         }
       }
     }
 
-    
-
     button {
-      width: 50%;
+      width: 250px;
       margin-top: 30px;
+      background-color: $black;
+      border: none;
+      color: $white;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: white;
+        color: $black;
+        border-color: $black;
+        cursor: pointer;
+      }
     }
   }
 }
