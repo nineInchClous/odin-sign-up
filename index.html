@@ -11,6 +11,38 @@
     <div id="img-container">
       <h1>Random website</h1>
     </div>
+    <section id="form-sect">
+      <h2>Sign up for free!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab eius iusto explicabo harum beatae officiis itaque, ea nemo quidem facilis quo reiciendis expedita, voluptatem illo sapiente ipsum nesciunt fugiat ipsam.</p>
+      <form method="POST">
+        <div class="input-container">
+          <label for="first-name">First name</label>
+          <input type="text" name="first_name" id="first-name" required minlength="3" maxlength="50">
+        </div>
+        <div class="input-container">
+          <label for="last-name">Last name</label>
+          <input type="text" name="last_name" id="last-name" required minlength="3" maxlength="50">
+        </div>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="input-container">
+          <label for="phone">Phone number</label>
+          <input type="tel" name="phone" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        </div>
+        <div class="input-container">
+          <label for="confirm-password">Confirm password</label>
+          <input type="password" name="confirm_password" id="confirm-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        </div>
+        <button type="submit">Create account</button>
+      </form>
+      <p>Already have an account ? <a href="#">Log in</a></p>
+    </section>
   </main>
 </body>
 </html>
