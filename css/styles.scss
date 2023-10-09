@@ -1,3 +1,41 @@
-:root {
-  
+@import "normalize.css", "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Karla:wght@400;600;700&display=swap');
+
+$full-height: 100vh;
+
+body {
+  min-height: $full-height;
+  font-family: 'Inconsolata', monospace;
+}
+
+main {
+  height: $full-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 3rem;
+  writing-mode: sideways-lr;
+  height: 100%;
+  text-align: center;
+  padding-left: 25%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#img-container {
+  width: 30%;
+  height: 100%;
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-size: cover;
+
+  p {
+    writing-mode: sideways-lr;
+  }
 }
