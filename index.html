@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odin Project - Sign up form</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <main>
@@ -14,30 +15,36 @@
     <section id="form-sect">
       <h2>Sign up for free!</h2>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab eius iusto explicabo harum beatae officiis itaque, ea nemo quidem facilis quo reiciendis expedita, voluptatem illo sapiente ipsum nesciunt fugiat ipsam.</p>
-      <form method="POST">
+      <form method="POST" novalidate>
         <div class="input-container">
           <label for="first-name">First name</label>
-          <input type="text" name="first_name" id="first-name" required minlength="3" maxlength="50">
+          <input type="text" name="first_name" id="first-name">
+          <p>Must be between 3 and 50 characters</p>
         </div>
         <div class="input-container">
           <label for="last-name">Last name</label>
-          <input type="text" name="last_name" id="last-name" required minlength="3" maxlength="50">
+          <input type="text" name="last_name" id="last-name">
+          <p>Must be between 3 and 50 characters</p>
         </div>
         <div class="input-container">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email" placeholder="example@mail.com">
+          <p>Must contains a '@'</p>
         </div>
         <div class="input-container">
           <label for="phone">Phone number</label>
-          <input type="tel" name="phone" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+          <input type="tel" name="phone" id="phone" placeholder="(555)-555-5555">
+          <p>Must be a valid format</p>
         </div>
         <div class="input-container">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+          <input type="password" name="password" id="password">
+          <p>Must be at least 8 characters long and same in both form element</p>
         </div>
         <div class="input-container">
           <label for="confirm-password">Confirm password</label>
-          <input type="password" name="confirm_password" id="confirm-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+          <input type="password" name="confirm_password" id="confirm-password">
+          <p>Must be at least 8 characters long and same in both form element</p>
         </div>
         <button type="submit">Create account</button>
       </form>

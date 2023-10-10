@@ -71,21 +71,23 @@ a {
     .input-container {
       display: flex;
       flex-direction: column;
+
       label {
-        display: inline-block;
         text-transform: lowercase;
         margin-bottom: 10px;
         opacity: 0.6;
+        align-self: flex-start;
       }
   
       input {
         width: 300px;
         padding: 10px;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         border-radius: 5px;
         outline: none;
         background-color: $black;
         color: $white;
+        margin-bottom: 5px;
         transition: all 0.2s ease;
 
         &:focus {
@@ -95,10 +97,23 @@ a {
 
         &.valid {
           border-color: green;
+
+          &+p {
+            display: none;
+          }
         }
         &.invalid {
           border-color: red;
+
+          &+p {
+            display: block;
+          }
         }
+      }
+
+      p {
+        color: red;
+        display: none;
       }
     }
 
